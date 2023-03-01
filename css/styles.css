@@ -263,13 +263,50 @@ header > div {
 }
 
 .profession {
-	margin: 0;
+	margin-top: 0;
+	margin-bottom: 8px;
 	font-size: 16px;
 
 	color: var(--sec-text-color);
 }
 
+.social-links {
+	display: flex;
+	justify-content: space-around;
+}
+
+.social-links > li {
+	border-radius: 50%;
+	background-color: var(--accent-color);
+}
+
+.icon-link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 44px;
+	height: 44px;
+
+	color: var(--main-background-color);
+	fill: currentColor;
+
+	border-radius: 50%;
+}
+
+.social-icon {
+	width: 20px;
+	height: 20px;
+}
+
+.icon-link:hover,
+.icon-link:focus {
+	color: var(--light-text-color);
+	background-color: var(--accent-color-2);
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
 /* Customers */
+
 .logo-list {
 	display: flex;
 	justify-content: space-between;
@@ -385,8 +422,12 @@ header > div {
 	background-color: var(--dark-background-color);
 }
 
+.footer-container {
+	display: flex;
+}
+
 .footer-logo-container {
-	width: 264px;
+	margin-right: 120px;
 }
 
 .studio-footer {
@@ -401,4 +442,40 @@ header > div {
 	width: 264px;
 	margin: 0;
 	color: var(--light-text-color);
+}
+
+.social-media {
+	margin-top: 0;
+	margin-bottom: 16px;
+	font-weight: 500;
+	font-size: 16px;
+	color: var(--light-text-color);
+}
+
+.footer-social-item:not(:last-child) {
+	margin-right: 10px;
+}
+
+.footer-icon-link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 44px;
+	height: 44px;
+
+	color: var(--light-text-color);
+	fill: currentColor;
+	background: rgba(255, 255, 255, 0.1);
+
+	border-radius: 50%;
+}
+
+.footer-social-icon {
+	width: 24px;
+	height: 24px;
+}
+
+.footer-icon-link:hover,
+.footer-icon-link:focus {
+	background-color: var(--accent-color);
 }
