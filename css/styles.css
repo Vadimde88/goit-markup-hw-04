@@ -139,19 +139,58 @@ header > div {
 
 	color: var(--sec-text-color);
 	fill: currentColor;
+
+	transition-property: color;
+	transition: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .site-nav {
+	position: relative;
 	padding: 24px 0;
 }
 
-.nav-link:hover,
-.nav-link:focus,
 .contacts:hover,
 .contacts:focus {
 	color: var(--accent-color-2);
 	transition: color 0.25s;
 	cursor: pointer;
+}
+
+.current::before {
+	content: "";
+	position: absolute;
+	display: inline-block;
+	bottom: 0;
+	left: 0;
+
+	width: 100%;
+	height: 4px;
+	border-radius: 2px;
+	background-color: var(--accent-color);
+}
+
+.nav-link::before {
+	content: "";
+	position: absolute;
+	display: inline-block;
+	bottom: 0;
+	left: 0;
+
+	width: 100%;
+	height: 4px;
+	border-radius: 2px;
+	background-color: var(--accent-color);
+
+	transition-property: fill, background-color;
+	transition: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transform: scale(0);
+}
+
+.nav-link:hover::before,
+.nav-link:focus::before {
+	transform: scale(1);
 }
 
 /* hero container */
