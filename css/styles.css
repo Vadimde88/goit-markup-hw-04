@@ -209,26 +209,54 @@ header > div {
 	padding-bottom: 120px;
 }
 
+/* vissualy-hidden */
 .features-section-title,
 .portfolio-title {
-	display: none;
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
 }
 
-.skills-list li:not(:last-child) {
+.features-list li:not(:last-child) {
 	margin-right: 24px;
 }
 
-.skills {
+.features {
 	margin-top: 0;
 	margin-bottom: 8px;
 	font-weight: 500;
 	font-size: 20px;
 }
 
-.skills-description {
+.features-description {
 	margin-top: 0;
 	margin-bottom: 0;
 	color: var(--sec-text-color);
+}
+
+.features-icon {
+	width: 64px;
+	height: 64px;
+}
+
+.features-icon-link {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 0 8px 0;
+	width: 264px;
+	height: 112px;
+
+	background: var(--sec-background-color);
+	border-radius: 4px;
 }
 
 /* What we do section */
